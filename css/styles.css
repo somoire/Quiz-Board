@@ -1,0 +1,12 @@
+
+body {
+  text-decoration-style: dashed;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  background-image: url("../Images/pics.jpg");
+}
+.container {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
