@@ -1,16 +1,31 @@
 /*  ====================Business logic=====================*/
+function scoreDisplay(){
+  var score= 0
+  var numOfQuestions= 4;
 
-$(document).ready(function() {
+ var question1=parseInt('input[name="q1"]:checked').value;
+ var question2=parseInt('input[name="q2"]:checked').value;
+ var question3=parseInt('input[name="q3"]:checked').value;
+ var question4=parseInt('input[name="q4"]:checked').value;
 
-  $("form#fwaweru").submit(function(event){
-  var q1 = $("input:radio[name=Hypertext Markup Language]:checked").val();
-  var q2 = $("input:radio[name=J.S]:checked").val();
-  var q3 = $("input:radio[name=Power point]:checked").val();
-  var q4 = $("input:radio[name=Cascading Style Sheet]:checked").val();
 
-  var youScore = parseInt(q1)+parseInt(q2)+parseInt(q3)+parseInt(q4);
-  $("#youScore").text("HI THERE! HERE'S YOU'RE SCORE: " +youScore + "%");
+ var output = document.getElementById('display').innerHTML;
 
-      //==== user Interface ====//
-    })
-  })
+ for(var i = 1; i <= numOfQuestions; i++){
+   if(('question'+ 1) == '') {
+    alert("answer all questions" + 1);
+  }
+
+for(var i = 1; i <= numOfQuestions; i++){
+  if (('question' + 1) == "Pellentesque cursus justo") {
+   score++;
+  }
+ }
+}
+
+ var display = document.getElementById('display');
+ display.innerHTML= "<h2>Your scores are " + score + " points out of " + numOfQuestions + "</h2>"
+
+ alert("Your scores are " + score + " out of " + numOfQuestions);
+
+}
