@@ -32,10 +32,11 @@
          final = marks += parseInt($(this).val());
        total = (final/20)*100;
      });
-    // document.getElementById("html-results").innerHTML = " your percentage score was " + total + "%";
+    //document.getElementById("html-results").innerHTML = " your percentage score was " + total + "%";
     alert("your percentage score was " + total + "%");
   });
  });
+ $("#story").show();
 // var display = document.getElementById('display');
 // display.innerHTML= "<h2>Your scores are " + score + " points out of " + numOfQuestions + "</h2>"
 
