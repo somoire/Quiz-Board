@@ -14,7 +14,9 @@
       <p>Answer the given questions below. Once done await to see your result. </p>
         </div>
       </div>
-    <form id="questions" name="form" onsubmit="validate()">
+      <div class="well">
+
+    <form id="test" name="form">
         <h2> Question 1 </h2>
         <p>What is HTML in full?</p>
 
@@ -42,12 +44,16 @@
           <input type="radio" name="q4" value="0">Creative style sheets<br>
           <input type="radio" name="q4" value="5">Cascading Style Sheet<br>
 
-          <button type="submit" id="buttn" class="btn">Show the score!</button>
+      <div>
+        <button type="submit" id="button1"  onclick="score()" class="btn">Submit</button>
+      </div>
         <div id="after-submit">
           <p> <span class="after-submit"></span> </p>
         </div>
+
           <h2>Score Sheet</h2>
       <div id="result"></div>
     </form>
+    </div>
     </body>
 </html>
