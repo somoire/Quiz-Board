@@ -1,31 +1,29 @@
 /*  ====================Business logic=====================*/
-function scoreDisplay(){
-  var score= 0
-  var numOfQuestions= 4;
+// function scoreDisplay(){
+//  var numOfQuestions= 4;
+//var scorePerQuestion =5
 
- var question1=parseInt('input[name="q1"]:checked').value;
- var question2=parseInt('input[name="q2"]:checked').value;
- var question3=parseInt('input[name="q3"]:checked').value;
- var question4=parseInt('input[name="q4"]:checked').value;
+ $(document).ready(function(){
+   $('butto#buttn').click(function() {
+     $("form.details").slideUp();
 
+$("#result").text('');
+ var score = 0;
+ var question1=parseInt($('input[name="q1"]:checked').val());
+ var question2=parseInt($('input[name="q2"]:checked').val());
+ var question3=parseInt($('input[name="q3"]:checked').val());
+ var question4=parseInt($('input[name="q4"]:checked').val());
 
- var output = document.getElementById('display').innerHTML;
+ var result = question1 + question2 + question3 + question4;
 
- for(var i = 1; i <= numOfQuestions; i++){
-   if(('question'+ 1) == '') {
-    alert("answer all questions" + 1);
-  }
+ document.getElementById('display').innerHTML = result;
+ $("#result").text(scoreDisplay(score));
+ event.preventDefault();
 
-for(var i = 1; i <= numOfQuestions; i++){
-  if (('question' + 1) == "Pellentesque cursus justo") {
-   score++;
-  }
- }
-}
+// var display = document.getElementById('display');
+// display.innerHTML= "<h2>Your scores are " + score + " points out of " + numOfQuestions + "</h2>"
 
- var display = document.getElementById('display');
- display.innerHTML= "<h2>Your scores are " + score + " points out of " + numOfQuestions + "</h2>"
+// alert("Your scores are " + score + " out of " + numOfQuestions);
 
- alert("Your scores are " + score + " out of " + numOfQuestions);
-
-}
+  });
+});
